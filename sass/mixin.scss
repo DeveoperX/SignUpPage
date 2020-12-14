@@ -1,0 +1,5 @@
+@mixin mq($agu) {
+    @media screen and(max-width: $agu){
+        @content;
+    }
+}

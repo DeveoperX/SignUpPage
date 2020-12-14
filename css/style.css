@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: linear-gradient(to right, rgba(238, 238, 238, 0.712) 10%, rgba(218, 218, 218, 0.705) 90%);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main_section {
+  height: 90vh;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.192);
+  margin: 30px 80px 0;
+  border-radius: 30px;
+  padding: 30px 80px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+@media screen and (max-width: 990px) {
+  .main_section {
+    padding: 20px 60px;
+    margin: 30px 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main_section {
+    padding: 20px 40px;
+    margin: 0;
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main_section {
+    padding: 20px;
+  }
+}
+
+.main_section::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 53%;
+  height: 100%;
+  background-image: url("../images/undraw_maker_launch_crhe.svg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@media screen and (max-width: 990px) {
+  .main_section::after {
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.61)), url("../images/undraw_maker_launch_crhe.svg");
+  }
+}
+
+.main_section .left_section {
+  width: 45%;
+}
+
+@media screen and (max-width: 990px) {
+  .main_section .left_section {
+    width: 100%;
+  }
+}
+
+.main_section h1 {
+  color: #001a49;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 990px) {
+  .main_section h1 {
+    color: white;
+  }
+}
+
+.main_section .sign_text {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.main_section .sign_text .line_bar {
+  width: 50px;
+  height: 2px;
+  background-color: #e03543;
+}
+
+.main_section .sign_text h5 {
+  color: #e03543;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.main_section .button_group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 400px) {
+  .main_section .button_group {
+    flex-direction: column;
+  }
+}
+
+.main_section .button_group button {
+  padding: 12px 20px;
+  padding-left: 30px;
+  background-color: transparent;
+  border-radius: 5px;
+  outline: none;
+  width: 48%;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 990px) {
+  .main_section .button_group button {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.603);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main_section .button_group button {
+    width: 100%;
+  }
+}
+
+.main_section .button_group button img {
+  width: 15px;
+  height: 15px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.main_section .button_group button:nth-child(2) {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  .main_section .button_group button:nth-child(2) {
+    margin: 10px 0 0 0;
+  }
+}
+
+.main_section form {
+  margin-top: 30px;
+}
+
+.main_section form .form_flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 400px) {
+  .main_section form .form_flex {
+    flex-direction: column;
+  }
+}
+
+.main_section form .form_flex div {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 400px) {
+  .main_section form .form_flex div {
+    width: 100%;
+  }
+  .main_section form .form_flex div:nth-child(1) {
+    margin-bottom: 10px;
+  }
+}
+
+.main_section form .form_flex div label {
+  font-size: 15px;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 990px) {
+  .main_section form .form_flex div label {
+    color: white;
+  }
+}
+
+.main_section form .form_flex div input {
+  width: 100%;
+  padding: 11px 5px;
+  background-color: #ededed;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+
+.main_section form .pass_div {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_section form .pass_div label {
+  font-size: 15px;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 990px) {
+  .main_section form .pass_div label {
+    color: white;
+  }
+}
+
+.main_section form .pass_div input {
+  width: 100%;
+  padding: 11px 5px;
+  background-color: #ededed;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+
+.main_section form .check_box {
+  margin-top: 15px;
+  display: flex;
+}
+
+.main_section form .check_box label {
+  font-size: 15px;
+  color: #2c2c2c;
+  max-width: 350px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 990px) {
+  .main_section form .check_box label {
+    color: white;
+  }
+}
+
+.main_section form .check_box input {
+  border-radius: 8px;
+  background-color: #ededed;
+  position: relative;
+  top: 2px;
+}
+
+.main_section form .btn {
+  background-color: #e03543;
+  padding: 20px 24px;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 22px;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px #e03543;
+}
+
+.main_section form .btn i {
+  font-size: 16px;
+}
+
+.main_section .last_text {
+  font-size: 15px;
+  font-weight: normal;
+  color: #2c2c2c;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 990px) {
+  .main_section .last_text {
+    color: white;
+  }
+}
+
+.main_section .last_text a {
+  color: #e03543;
+  padding-left: 5px;
+}
+/*# sourceMappingURL=style.css.map */

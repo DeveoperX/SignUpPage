@@ -1,0 +1,231 @@
+@import "mixin.scss";
+$main_color:rgb(224, 53, 67);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, rgba(238, 238, 238, 0.712) 10%, rgba(218, 218, 218, 0.705) 90%);
+    height: 100vh;
+    overflow: hidden;
+}
+.main_section{
+    height: 90vh;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.192);
+    margin: 30px 80px 0;
+    border-radius: 30px;
+    padding: 30px 80px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    @include mq(990px){
+        padding: 20px 60px;
+        margin: 30px 50px;
+    }
+    @include mq(600px){
+        padding: 20px 40px;
+        margin: 0;
+        height: 100vh;
+    }
+    @include mq(400px){
+        padding: 20px;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 53%;
+        height: 100%;
+        background-image: url("../images/undraw_maker_launch_crhe.svg");
+        background-position: center;
+        background-size: 100%; 
+        background-repeat: no-repeat; 
+        object-fit: cover;
+        z-index: -1;
+        @include mq(990px){
+            width: 100%;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.61)), url("../images/undraw_maker_launch_crhe.svg");
+        }
+    }  
+    .left_section{
+        width: 45%;
+        @include mq(990px){
+            width: 100%;
+        }
+    }
+    h1{
+        color: rgb(0, 26, 73);
+        font-weight: bolder;
+        font-size: 50px;
+        @include mq(990px){
+            color: white;
+        }
+    }
+    .sign_text{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        .line_bar{
+            width: 50px;
+            height: 2px;
+            background-color: $main_color;
+        }
+        h5{
+            color: $main_color;
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 25px;
+        }
+    }
+    .button_group{
+        display: flex;
+        justify-content: space-between;
+        @include mq(400px){
+            flex-direction: column;
+        }
+        margin-top: 30px;
+        button{
+            padding: 12px 20px;
+            padding-left: 30px;
+            background-color: transparent;
+            border-radius: 5px;
+            outline: none;
+            width: 48%;
+            border: 1px solid rgba(0, 0, 0, 0.178);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            @include mq(990px){
+                color: white;
+                border: 1px solid rgba(255, 255, 255, 0.603);
+            }
+            @include mq(400px){
+                width: 100%;
+            }
+            img{
+                width: 15px;
+                height: 15px;
+                object-fit: cover;
+                margin-right: 10px;
+             }
+            &:nth-child(2){
+                margin-left: 20px;
+                @include mq(400px){
+                    margin: 10px 0 0 0 ;
+                }
+            }
+        }
+    }
+    form{
+        margin-top: 30px;
+        .form_flex{
+            display: flex;
+            justify-content: space-between;
+            @include mq(400px){
+                flex-direction: column;
+            }
+            div{
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                @include mq(400px){
+                    &:nth-child(1){
+                        margin-bottom: 10px;
+                    }
+                    width: 100%;
+                }
+                label{
+                    font-size: 15px;
+                    color: rgb(44, 44, 44);
+                    margin-bottom: 8px;
+                    @include mq(990px){
+                        color: white;
+                    }
+                }
+                input{
+                    width: 100%;
+                    padding: 11px 5px;
+                    background-color: rgb(237, 237, 237);
+                    outline: none;
+                    border: none;
+                    border-radius: 8px;
+                }
+            }
+        }
+        .pass_div{
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            label{
+                font-size: 15px;
+                color: rgb(44, 44, 44);
+                margin-bottom: 8px;
+                @include mq(990px){
+                    color: white;
+                }
+            }
+            input{
+                width: 100%;
+                padding: 11px 5px;
+                background-color: rgb(237, 237, 237);
+                outline: none;
+                border: none;
+                border-radius: 8px;
+            }
+        }
+        .check_box{
+            margin-top: 15px;
+            display: flex;
+            label{
+                font-size: 15px;
+                color: rgb(44, 44, 44);
+                max-width: 350px;
+                margin-left: 10px;
+                @include mq(990px){
+                    color: white;
+                }
+            }
+            input{
+                border-radius: 8px;
+                background-color: rgb(237, 237, 237);
+                position: relative;
+                top: 2px;
+            }
+        }
+        .btn{
+            background-color: $main_color;
+            padding: 20px 24px;
+            outline: none;
+            border: none;
+            color: white;
+            border-radius: 22px;
+            margin-top: 20px;
+            cursor: pointer;
+            box-shadow: 0 3px 10px $main_color;
+            i{
+                font-size: 16px;
+            }
+        }
+    }
+    .last_text{
+        font-size: 15px;
+        font-weight: normal;
+        color: rgb(44, 44, 44);
+        margin-top: 20px;
+        @include mq(990px){
+            color: white;
+        }
+        a{
+            color: $main_color;
+            padding-left: 5px;
+        }
+    }
+}
